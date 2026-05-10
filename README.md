@@ -11,6 +11,7 @@ This repository contains the source code for a basic implementation of the Priva
 As a prerequisite, ensure GCC version 14.2.0+ and OpenSSL 3.5+ are installed on your machine. From the directory of this repository, the following two commands can be used to generate the programs for creating an RFC 9883 CSR, and creating a certificate from the CSR.
 
 ```bash
+  mkdir run
   gcc -o run/generate_csr src/request.c src/rfc9883.c -lssl -lcrypto -Wall -Wextra  
   gcc -o run/generate_cert src/sign.c src/rfc9883.c -lssl -lcrypto -Wall -Wextra  
 ```
